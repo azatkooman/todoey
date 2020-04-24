@@ -3,7 +3,6 @@ import 'package:todoey/widgets/task_list.dart';
 import 'package:todoey/screens/add_task_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:todoey/models/add_state.dart';
-import 'package:todoey/models/task.dart';
 
 class TasksScreen extends StatelessWidget {
   Widget buildBottomSheet(BuildContext context) {
@@ -60,7 +59,7 @@ class TasksScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
                 Text(
-                  Provider.of<TaskState>(context).tasks.length.toString(),
+                  '${Provider.of<TaskState>(context).taskCount} task(s)',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,

@@ -1,12 +1,10 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
+
 import 'package:provider/provider.dart';
 import 'package:todoey/models/add_state.dart';
 import 'package:todoey/models/task.dart';
-import 'package:todoey/widgets/task_list.dart';
 
 class AddTaskScreen extends StatelessWidget {
   //final List<Task> tasks;
@@ -54,6 +52,7 @@ class AddTaskScreen extends StatelessWidget {
               onPressed: () {
                 Provider.of<TaskState>(context, listen: false)
                     .addNewTask(Task(name: textFieldValue));
+                Navigator.pop(context);
               },
               elevation: 5.0,
               child: Text(
