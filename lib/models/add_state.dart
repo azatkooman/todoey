@@ -27,4 +27,9 @@ class TaskState with ChangeNotifier {
     task.toggleDone();
     notifyListeners();
   }
+
+  void deleteTask(int index) {
+    _tasks.removeAt(index);
+    notifyListeners();
+  }
 }

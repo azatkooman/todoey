@@ -12,6 +12,7 @@ class TaskTile extends StatelessWidget {
     return CheckboxListTile(
       value: isChecked,
       onChanged: checkboxCallback,
+
       title: Text(
         taskTitle,
         style: TextStyle(
